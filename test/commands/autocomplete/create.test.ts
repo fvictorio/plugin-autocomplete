@@ -115,6 +115,7 @@ complete -F _oclif-example oclif-example\n`)
     })
 
     it('#zshCompletionFunction', () => {
+      /* eslint-disable no-useless-escape */
       expect(cmd.zshCompletionFunction).to.eq(`#compdef oclif-example
 
 _oclif-example () {
@@ -168,6 +169,8 @@ autocomplete:foo)
 }
 
 _oclif-example\n`)
+
+      /* eslint-enable no-useless-escape */
     })
   })
 })

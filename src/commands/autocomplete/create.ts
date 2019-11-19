@@ -17,6 +17,7 @@ function sanitizeDescription(description?: string): string {
   }
   return description
   .replace(/([`"])/g, '\\\\\\$1') // backticks and double-quotes require triple-backslashes
+  // eslint-disable-next-line no-useless-escape
   .replace(/([\[\]])/g, '\\\\$1') // square brackets require double-backslashes
   .split('\n')[0] // only use the first line
 }
